@@ -1,0 +1,10 @@
+.togo{
+    height: 100vh;
+}
+.category::after{
+    content: "W";
+    color: red;
+    font-size: 20px;
+    max-width: 5px;
+    
+}
