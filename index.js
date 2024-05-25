@@ -7,28 +7,42 @@ let btnAdd = document.getElementById("button-addon2")
  }
  else {
      let list = document.createElement("li");
-     list.textContent = input.value
+     list.textContent = input.value;
      list.classList.add("list-group-item","category");
      nn.appendChild(list)
      
- }
+ } 
  input.value="" 
+ save()
+
  })
 
 list.addEventListener("click", function(e){
-  e.target.remove()})
+  e.target.remove() } )
 
- 
     
-  input.addEventListener("keydown" ,function(e) {
-    if (e.key === "Enter") {
+  input.addEventListener("keydown" ,function (e) {
+    if (e.key === "Enter" && input.value !=="") {
         let list = document.createElement("li");
      list.textContent = input.value
      list.classList.add("list-group-item","category");
      nn.appendChild(list)
-     input.value=""
+     input.value="" 
+     save()
     }
+    
   })
+
+
+
+
+  function save() {
+    localStorage.setItem("data", nn.innerHTML);
+}
+function read() {
+  nn.innerHTML=localStorage.getItem("data")
+}
+read()
 
 
 
