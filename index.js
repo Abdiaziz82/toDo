@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(){
+
+
+
 const input = document.getElementById("input");
 const nn = document.getElementById("list")
 let btnAdd = document.getElementById("button-addon2")
@@ -44,7 +48,7 @@ function read() {
 }
 read()
 
-
+})
 
 
  
